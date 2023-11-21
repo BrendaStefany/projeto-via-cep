@@ -8,6 +8,11 @@
 
 Este projeto consiste em um Frontend desenvolvido utilizando o framework React. A interface permite que os usuários insiram um CEP no campo designado. Após alguns segundos de inatividade (sem a necessidade de clique), a aplicação realiza automaticamente uma requisição à API [ViaCEP](https://viacep.com.br/) para buscar e exibir informações associadas ao CEP fornecido.
 
+## Acesso à Aplicação
+
+Para acessar a aplicação web, clique [aqui](https://buscacepuninassau.netlify.app/).
+
+
 ### Funcionalidades Principais:
 
 - **Preenchimento Automático do CEP:** Os usuários podem inserir um CEP válido no campo designado da aplicação e, após alguns segundos sem atividade, a aplicação realizará automaticamente uma requisição para buscar detalhes como rua, bairro, cidade e estado associados ao CEP.
