@@ -1,11 +1,26 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url("/assets/fundo.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  margin: 0; 
+  height: 100vh; 
 }
 
 form {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  background: #1d1d1d; 
+  padding: 20px; 
+  max-width: 400px; 
+  width: 120%; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 3%;
+  justify-content: center;
 }
 
 label{
@@ -14,5 +29,29 @@ label{
 }
 
 input {
-  margin-bottom: 10px;
+  width: 87%;
+  padding: 20px;
+  border: 0;
+  font-size: 1em;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.titulo_cep {
+  font-weight: 700;
+  font-size:3em;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom:20px;
+  text-align: center;
+}
+
+.subtitulo {
+  font-weight: 500;
+  font-size:1em;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom:15px;
+  
 }

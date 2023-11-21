@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -11,50 +11,58 @@ function App() {
   });
 
   const checkCEP = (e) => {
-    const cep = e.target.value.replace(/\D/g, '');
-    if (!e.target.value) return;
-    console.log(cep);
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        setFormData({
-          ...formData,
+    formData.cep= e.target.value.replace(/\D/g, '');
+  }
+
+  useEffect(() => {
+    console.log(formData.cep);
+    if (!formData.cep) return;
+    
+    fetch(`https://viacep.com.br/ws/${formData.cep.replace(/\D/g, '')}/json/`)
+    .then(res => res.json())
+    .then(data =>  {setFormData(
+      {
+        ...formData,
           rua: data.logradouro,
           bairro: data.bairro,
           cidade: data.localidade,
           uf: data.uf,
-        });
-      }).catch((err) => console.log(err));
-  }
+      }
+    )})
+    .catch((err) => console.log(err));
+  }, [formData.cep]);
+  
 
   return (
-    <form >
-      <label>
-        CEP:
-        <input
-          type="text"
-          value={formData.cep}
-          onChange={e => setFormData({ ...formData, cep: e.target.value })}
-          onBlur={checkCEP}
-        />
-      </label>
-      <label>
-        Rua:
-        <input type="text" value={formData.rua} />
-      </label>
-      <label>
-        Bairro:
-        <input type="text" value={formData.bairro} />
-      </label>
-      <label>
-        Cidade:
-        <input type="text" value={formData.cidade} />
-      </label>
-      <label>
-        Estado:
-        <input type="text" value={formData.uf} />
-      </label>
+    <form className="formulario">
+      <h1 class="titulo_cep">Busca CEP</h1>
+      <div className='alinhar'>
+        <label class="subtitulo">
+          CEP:
+          <input
+            type="text"
+            value={formData.cep}
+            onChange={e => setFormData({ ...formData, cep: e.target.value })}
+            onBlur={checkCEP}
+          />
+        </label>
+        <label class="subtitulo">
+          Rua:
+          <input type="text" value={formData.rua} />
+        </label>
+        <label class="subtitulo">
+          Bairro:
+          <input type="text" value={formData.bairro} />
+        </label >
+        <label class="subtitulo">
+          Cidade:
+          <input type="text" value={formData.cidade} />
+        </label>
+        <label class="subtitulo">
+          Estado:
+          <input type="text" value={formData.uf} />
+        </label>
+      </div>
     </form>
   );
 }
