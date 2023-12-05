@@ -50,7 +50,6 @@ Este sistema simplifica o processo de busca por informações relacionadas a um 
 <table align="center">
   <tr>
     <td align="center"><a href="https://github.com/BrendaStefany"><img src="https://avatars.githubusercontent.com/u/85852834?v=4" width="150px" alt="Brenda Stefany"/><br /><sub><b>Brenda Stefany</b></sub></a</td>
-    <td align="center"><a href="https://github.com/EmellyKesia"><img src="https://avatars.githubusercontent.com/u/143356737?v=4" width="150px" alt="Emelly Kesia"/><br /><sub><b>Emelly Kesia</b></sub></a></td>
     <td align="center"><a href="https://github.com/jardson123442"><img src="https://avatars.githubusercontent.com/u/126803792?v=4" width="150px" alt="Jardson Venâncio"/><br /><sub><b>Jardson Venâncio</b></sub></a></td>
     <td align="center"><a href="https://github.com/nuttiju"><img src="https://avatars.githubusercontent.com/u/82540936?v=4" width="150px" alt="Júlia Nutti"/><br /><sub><b>Júlia Nutti</b></sub></a></td>
     </sub></a></td>
